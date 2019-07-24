@@ -1,10 +1,11 @@
 package org.burdzi0.hermes.repository;
 
 import org.burdzi0.hermes.model.entity.Statement;
-import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 public interface StatementRepository extends JpaRepository<Statement, Long> {
 
-	Page<Statement> getAllByTitle(String title);
+	List<Statement> getAllByTitle(String title);
 }
