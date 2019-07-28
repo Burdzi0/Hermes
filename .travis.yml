@@ -2,7 +2,8 @@ language: java
 jdk:
 - openjdk11
 notifications:
-  slack: asipwr:ZjluuiXWUW8aExYcZTnLjSul
+  slack:
+    secure: Bt+yIaCLtQBHH/5rZiAHHMf77Lzg84z7bBqn4dahRg+U0v83ciqN4uDU4PnnUdZxNKuBJjKJV6nfN35GO0FVpSg1OcRULqL5+M67yZ8mxTESCpqtUM1B2IObfI0avM6AKxjqv2lZRPpFbigqaaMc/Xzhq9ekIi23OgvY18KymgjX5xBrdUP+iuTUDozfj6PQajE0scZyf4ecQ6LWKuQgcRwATbbFY7ZtX/X6aXmOv4LTrcq0rR+4wobU91XgdrxXdAK9ALNEWWdk8QPbfk0ChcJYTnB2iGVV3jDw1AxLyfsrqqU/gHO521nKQZNJovQFgC2bKxsC+eDaYD+Zrj+YxNBtP8h/XSI5NtK/wh/6n9Tt3/hk+NN0BDFcJEG53NDMGnQnj/gsRP+49TT6L+UmGs8Yc09eNPQckC/Qyrv1X0xTbf9+Ndq4HB/73P3B/BCr9Tqs1dVPmMHzFqsS1IytJ8TwpUWzEfHCBSTW4ygYLvwinErFstAURkt66lY22TKL6jhob6t+N8KsCUrO8hsiSpXARF2KL7ugGgdu4AdmgXlFCuhHnazSSGGwA1HxNLROOmabKfRct8Xb5MwlIooBN3btTCJogfjsNvhz6BtKfTv4RtahA4V+P6us1UnTevLCIiQ5X1Ltxdtul0twr3whdC91hr8UH1TCIuQQ4S8kkBI=
     on_success: change
-    on_failure: never
+    on_failure: always
     on_pull_requests: true
