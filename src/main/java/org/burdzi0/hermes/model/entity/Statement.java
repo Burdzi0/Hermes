@@ -8,6 +8,7 @@ import java.util.StringJoiner;
 import static java.time.ZonedDateTime.now;
 
 @Entity
+@Table(name = "HERMES_STATEMENTS")
 public class Statement {
 
 	@Id
@@ -15,10 +16,12 @@ public class Statement {
 	private Long id;
 
 	@ManyToOne
-	@JoinColumn(name = "USER_ID")
+	@JoinColumn(name = "USER_ID", nullable = false)
 	private User author;
 
 	private ZonedDateTime created;
+
+	@Column(nullable = false)
 	private String title;
 
 	@Lob
