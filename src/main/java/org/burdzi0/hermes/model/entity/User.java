@@ -1,19 +1,21 @@
 package org.burdzi0.hermes.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 @Entity
+@Table(name = "HERMES_USER")
 public class User {
 
 	@Id
 	@GeneratedValue
 	private Long id;
 
+	@Column(nullable = false)
 	private String username;
+
+	@Column(nullable = false)
 	private String password;
 
 	public User() {
