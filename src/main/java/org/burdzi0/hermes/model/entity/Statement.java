@@ -1,11 +1,12 @@
 package org.burdzi0.hermes.model.entity;
 
 import javax.persistence.*;
-import java.time.ZonedDateTime;
+import javax.validation.constraints.Size;
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-import static java.time.ZonedDateTime.now;
+import static java.time.OffsetDateTime.now;
 
 @Entity
 @Table(name = "HERMES_STATEMENTS")
@@ -19,12 +20,15 @@ public class Statement {
 	@JoinColumn(name = "USER_ID", nullable = false)
 	private User author;
 
-	private ZonedDateTime created;
+	@Column(nullable = false)
+	private OffsetDateTime created;
 
+	@Size(min = 1, max = 255)
 	@Column(nullable = false)
 	private String title;
 
 	@Lob
+	@Column(nullable = false)
 	private String content;
 
 	public Statement() {
@@ -37,7 +41,7 @@ public class Statement {
 		this.created = now();
 	}
 
-	public Statement(User author, ZonedDateTime created, String title, String content) {
+	public Statement(User author, OffsetDateTime created, String title, String content) {
 		this.author = author;
 		this.created = created;
 		this.title = title;
@@ -60,11 +64,11 @@ public class Statement {
 		this.author = author;
 	}
 
-	public ZonedDateTime getCreated() {
+	public OffsetDateTime  getCreated() {
 		return created;
 	}
 
-	public void setCreated(ZonedDateTime created) {
+	public void setCreated(OffsetDateTime created) {
 		this.created = created;
 	}
 
