@@ -1,4 +1,4 @@
-package org.burdzi0.hermes.config;
+package org.burdzi0.hermes.config.db;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
