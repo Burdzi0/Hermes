@@ -4,20 +4,20 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.burdzi0.hermes.model.entity.Statement;
 
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 
 public class StatementDto {
 
 	private long id;
 	private long authorId;
-	private ZonedDateTime created;
+	private OffsetDateTime created;
 	private String title;
 	private String content;
 
 	@JsonCreator
 	public StatementDto(@JsonProperty long id,
 	                    @JsonProperty("author-id") long authorId,
-	                    @JsonProperty ZonedDateTime created,
+	                    @JsonProperty OffsetDateTime created,
 	                    @JsonProperty String title,
 	                    @JsonProperty String content) {
 		this.id = id;
@@ -35,7 +35,7 @@ public class StatementDto {
 		return authorId;
 	}
 
-	public ZonedDateTime getCreated() {
+	public OffsetDateTime getCreated() {
 		return created;
 	}
 
