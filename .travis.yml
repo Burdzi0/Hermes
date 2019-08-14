@@ -2,7 +2,9 @@ language: java
 jdk:
 - openjdk11
 notifications:
-  slack: asipwr:ZjluuiXWUW8aExYcZTnLjSul
+  slack:
+    rooms:
+    - asipwr:ZjluuiXWUW8aExYcZTnLjSul#java
     on_success: change
-    on_failure: never
+    on_failure: always
     on_pull_requests: true
